@@ -1,3 +1,5 @@
+// dApp staking whitelisted contract
+
 /*
 Project overview:
 SubWallet is the leading comprehensive non-custodial wallet solution for Polkadot, Substrate & Ethereum ecosystems. With the mission of bringing users closer to Web3, we envision a Web3 multiverse gateway through which users can enjoy multichain services with utmost ease and absolute security. Connecting and using blockchain-based applications is smoother than ever with SubWallet Browser Extension, SubWallet Mobile App and SubWallet Web Dashboard.
@@ -50,6 +52,12 @@ mod subwallet_dapp_staking {
         #[ink(message)]
         pub fn say_hello(&self) -> String {
             "Hello, this is SubWallet dApp Staking!".into()
+        }
+    }
+
+    impl Default for DappStaking {
+        fn default() -> Self {
+            Self::new()
         }
     }
 }
